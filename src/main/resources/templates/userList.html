@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>userList</title>
+</head>
+<body>
+    <p >
+        <b>姓名：</b>
+        <h2>用户列表</h2>
+        <div th:unless="${#lists.isEmpty(userList)}">
+            <!--/*@thymesVar id="userList" type=""*/-->
+            <dl th:each="user: ${userList}">
+                <dt>
+                    <span th:text="${user.username}"></span>
+                </dt>
+            </dl>
+        </div>
+    </p>
+</body>
+</html>
