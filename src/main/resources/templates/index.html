@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>llm</title>
+    <link type="text/css" rel="stylesheet" th:href="@{private/css/index.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{private/css/common.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{ui/AmazeUI-2.7.2/css/amazeui.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{js/jq1.12.1/jquery-ui.css}"/>
+    <script type="text/javascript" th:src="@{js/jq1.12.1/external/jquery/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{js/jq1.12.1/jquery-ui.js}"></script>
+    <script type="text/javascript" th:src="@{ui/AmazeUI-2.7.2/js/amazeui.js}"></script>
+</head>
+<body>
+<div class="header">
+    <span class="h-title">STRAY CAT</span>
+    <ul class="h-menu">
+        <li>首页</li>
+        <li>发现</li>
+        <li>求助</li>
+        <li>寄养</li>
+        <li><a href="/community/getDynamic">动态</a></li>
+        <li>登录</li>
+    </ul>
+</div>
+<div class="b-container">
+    <div class="am-g am-g-collapse l-imgs">
+        <div class="h-img">
+            <img th:src="@{private/img/index1.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index2.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index3.gif}"/>
+        </div>
+    </div>
+    <div class="am-g am-g-collapse l-imgs">
+        <div class="h-img">
+            <img th:src="@{private/img/index4.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index5.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index6.jpg}"/>
+        </div>
+    </div>
+    <div class="am-g am-g-collapse l-imgs">
+        <div class="h-img">
+            <img th:src="@{private/img/index7.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index8.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index9.jpg}"/>
+        </div>
+    </div>
+    <div class="am-g am-g-collapse l-imgs">
+        <div class="h-img">
+            <img th:src="@{private/img/index10.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index11.jpg}"/>
+        </div>
+        <div class="h-img">
+            <img th:src="@{private/img/index12.jpg}"/>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+       $(".h-img").addClass("am-u-sm-12 am-u-md-6 am-u-lg-4").scrollspy({
+           animation: 'scale-up'
+       });
+    });
+</script>
+</html>

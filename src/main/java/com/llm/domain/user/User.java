@@ -4,6 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,8 +17,26 @@ import java.util.List;
 public class User implements UserDetails {
     private String id;
     private String username;
+    private String phone;
+    private String account;
     private String password;
     private List<String> roleList;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
 
     public String getId() {
         return id;
@@ -33,6 +52,7 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+//        new BCryptPasswordEncoder().encode(password)
     }
 
     public List<String> getRoleList() {
